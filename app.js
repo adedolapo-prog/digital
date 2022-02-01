@@ -15,6 +15,7 @@ app.get("/", async (req, res, next) => {
   res.send({ message: "Awesome it works 🐻" })
 })
 
+//Mongo connection
 mongoose
   .connect(process.env.MONGO_URI)
   .then((data) => console.log("Database Connected"))
@@ -23,6 +24,7 @@ mongoose
     process.exit(1)
   })
 
+//Api route
 app.use("/api", require("./routes"))
 
 app.use((req, res, next) => {
