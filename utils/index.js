@@ -1,6 +1,7 @@
 const getHashTags = (string) => {
   let stringArr = string.split(" ")
 
+  //removes any punctuation marks from the words
   stringArr = stringArr.map((str) => {
     return str.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ")
   })
