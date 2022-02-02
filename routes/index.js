@@ -1,7 +1,8 @@
-const router = require('express').Router();
+const router = require("express").Router()
+const {
+  registrationController,
+} = require("../controllers/registrationController")
 
-router.get('/', async (req, res, next) => {
-  res.send({ message: 'Ok api is working 🚀' });
-});
+router.post("/registration", registrationController)
 
-module.exports = router;
+module.exports = router
